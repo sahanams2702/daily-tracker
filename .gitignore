@@ -27,6 +27,10 @@ pnpm-debug.log*
 
 # Local editor files
 .vscode/
+.idea/
+
+# Deployment
+.vercel/
 
 # Operating system files
 .DS_Store

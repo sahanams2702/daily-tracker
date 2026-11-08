@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { login, register } from '../../../api';
@@ -60,6 +61,14 @@ export default function LoginPage() {
           />
           {!isLogin && <small className="muted">At least 8 characters</small>}
         </label>
+
+        {isLogin && (
+          <p className="auth-switch">
+            <Link href="/forgot-password" className="link">
+              Forgot password?
+            </Link>
+          </p>
+        )}
 
         {error && <p className="alert" role="alert">{error}</p>}
 
